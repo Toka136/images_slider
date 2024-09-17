@@ -1,0 +1,39 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Slider</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="slider">
+        <div class="container" id="container"  >
+            <div class="img" id="img-container" >
+                <img src="images/img_mountains_wide.jpg" class="" alt="">
+                <img src="images/img_lights_wide.jpg" class="hidden" alt="">
+                <img src="images/img_nature_wide.jpg" class="hidden" alt="">
+                <img src="images/img_snow_wide.jpg"  class="hidden" alt="">
+            </div>
+            <button id="pervious"><i class="fa-solid fa-angle-left" ></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+            <div class="dots">
+                <button class="but " onclick="change(0)" >
+                    <i class="fa-solid fa-circle active "></i>
+                </button>
+                <button class="but" onclick="change(1)" >
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <button class="but" onclick="change(2)" >
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <button class="but" onclick="change(3)" >
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>

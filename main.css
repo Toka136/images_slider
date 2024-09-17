@@ -1,0 +1,129 @@
+body
+{
+    margin: 0;
+}
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+}
+.slider
+{
+    height: 100vh;
+    background:linear-gradient(45deg, #03045e,#046496);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider .container
+{
+    width: 60%;
+    border-radius: 10px;
+    position: relative;
+    height: fit-content;
+}
+.slider .container img
+{
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+    /* transition: 1s; */
+    
+}
+@keyframes hide-show
+ {
+    from 
+    {
+        opacity: .2
+    }
+    to 
+    {
+        opacity: 1
+    }
+  }
+.slider .container  .hidden
+{
+   
+    display: none;
+    
+}
+.slider .container .animi
+{
+    
+    animation-name: hide-show;
+    animation-duration: 1.7s;
+}
+.slider .container > button
+{
+    outline: none;
+    border: none;
+    background: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: darkblue;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .3s;
+    position: absolute;
+    top: 40%;
+}
+.slider .container >  button i
+{
+    font-size: 35px;
+    font-weight: 700;
+}
+.slider .container > button:nth-child(3)
+{
+ right: 0;
+}
+.slider .container > button:hover
+{
+    background-color: darkblue;
+    color: white;
+}
+.slider .container .dots
+{
+    text-align: center;
+    margin-top: 25px;
+}
+.slider .container .dots button
+{
+    background: none;
+    outline: none;
+    border: 2px solid #046496;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.slider .container .dots button i
+{
+    color: aqua;
+    font-size: 20px;
+}
+.slider .container .dots  .active
+{
+    color: #03045e;
+}
+@media(max-width:767px)
+{
+    .slider .container
+    {
+        width: 80%;
+        height: 50vh;
+    }
+    .slider .container button
+    {
+        left: -18px;
+    }
+    .slider .container button:nth-child(3)
+    {
+        left: 83%;
+    }
+}
+@media (max-width: 374px) 
+{
+    .slider .container {
+        width: 90%;
+        height: 55vh;
+    }
+}
