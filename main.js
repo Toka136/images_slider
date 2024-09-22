@@ -103,13 +103,13 @@ function prevslide()
    
     
 }
-container.onmouseover =function ()
+function stop ()
 {
     // console.log("in");
     clearInterval(int);
     f2=0;
 }
-container.onmouseout=function()
+function startslider()
 {
     if(!f2)
     {
@@ -121,12 +121,13 @@ container.ontouchstart = function()
 {
     start = event.touches[0].clientX;
     console.log(start);
+    stop()
 }
 container.ontouchmove=function()
 {
     let strat2=event.touches[0].clientX;
     let dist= strat2 - start;
-    if(dist>50)
+    if(dist>150)
     {
         prevslide()
     }
@@ -134,4 +135,5 @@ container.ontouchmove=function()
     {
         nextslide()
     }
+    startslider()
 }
