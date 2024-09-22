@@ -40,6 +40,7 @@ function active(j)
 }
 let count=0,f=0,f2=0;
 let int=setInterval(slide, 5000);
+let start;
 function slide()
 {
     count++;
@@ -61,7 +62,7 @@ function slide()
 
 }
 
-next.onclick=function()
+function nextslide()
 {   
      count++;
     if(count>=4)
@@ -80,7 +81,7 @@ next.onclick=function()
     active(count);
     
 }
-pervious.onclick=function()
+function prevslide()
 {
    
        count--;
@@ -102,11 +103,9 @@ pervious.onclick=function()
    
     
 }
-
-
 container.onmouseover =function ()
 {
-    console.log("in");
+    // console.log("in");
     clearInterval(int);
     f2=0;
 }
@@ -116,5 +115,23 @@ container.onmouseout=function()
     {
         f2=1;
     int=setInterval(slide, 5000);
+    }
+}
+container.ontouchstart = function()
+{
+    start = event.touches[0].clientX;
+    console.log(start);
+}
+container.ontouchmove=function()
+{
+    let strat2=event.touches[0].clientX;
+    let dist= strat2 - start;
+    if(dist>50)
+    {
+        prevslide()
+    }
+    else
+    {
+        nextslide()
     }
 }
