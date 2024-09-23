@@ -135,5 +135,5 @@ container.ontouchmove=function()
     {
         nextslide()
     }
-    startslider()
+    stratslider()
 }
