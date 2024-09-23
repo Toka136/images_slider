@@ -28,7 +28,7 @@ body
     border-radius: 10px;
     object-fit: cover;
     height: 100%;
-    /* transition: 1s; */
+    transition: 1s;
     
 }
 @keyframes hide-show

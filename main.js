@@ -109,7 +109,7 @@ function stop ()
     clearInterval(int);
     f2=0;
 }
-function startslider()
+function stratslider()
 {
     if(!f2)
     {
