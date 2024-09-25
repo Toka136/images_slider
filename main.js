@@ -122,23 +122,28 @@ function stratslider()
     int=setInterval(slide, 5000);
     }
 }
-container.ontouchstart = function()
-{
-    start = event.touches[0].clientX;
-    console.log(start);
-    stop()
-}
-container.ontouchmove=function()
-{
-    let strat2=event.touches[0].clientX;
-    let dist= strat2 - start;
-    if(dist>150)
-    {
-        prevslide()
-    }
-    else
-    {
-        nextslide()
-    }
-    stratslider()
-}
+// container.ontouchstart = function()
+// {
+//     start = event.touches[0].clientX;
+//     console.log(start);
+//     stop()
+// }
+// container.ontouchmove=function()
+// {
+//     setTimeout("",6000);
+//     let strat2=event.touches[0].clientX;
+//     let dist= strat2 - start;
+//     if(dist>150)
+//     {
+//         prevslide()
+//     }
+//     else
+//     {
+//         nextslide()
+//     }
+//     stratslider()
+// }
+
+
+
+
