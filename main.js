@@ -20,6 +20,8 @@ function change(i)
     }
     buttons[i].classList.add("active");
     count=i;
+    clearInterval(int);
+    int=setInterval(slide, 5000);
 }
 function active(j)
 {
@@ -79,7 +81,8 @@ function nextslide()
     images[count].classList.add("animi");
 
     active(count);
-    
+    clearInterval(int);
+    int=setInterval(slide, 5000);
 }
 function prevslide()
 {
@@ -100,6 +103,8 @@ function prevslide()
         
         images[count].classList.remove("hidden");
         images[count].classList.add("animi");
+        clearInterval(int);
+        int=setInterval(slide, 5000);
    
     
 }
